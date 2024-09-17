@@ -1,0 +1,259 @@
+:root {
+    --black: #212121;
+    --white: #ffffff;
+    --primary_color: #2f303a;
+    --blue: #2196f3;
+    --grey: #757575;
+    --white_button: #f5f4fa;
+    --dominant_font: "Roboto", sans-serif;
+}
+
+body {
+    font-family: var(--dominant_font);
+    color: var(--black);
+    font-style: normal;
+    line-height: normal;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+address {
+    font-style: normal;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header {
+    .logo-header {
+        color: var(--blue);
+        > span {
+            color: var(--black)
+        }
+        font-family: Raleway, sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+    }
+
+    .header-link-list {
+        .header-link-element {
+            font-weight: 500;
+            letter-spacing: 0.02em;
+
+            a {
+                transition: color 300ms ease-in-out;
+            }
+
+            a:hover, a:focus {
+                color: var(--blue);
+            }
+        }
+    }
+
+    .header-contact-list {
+        .contact-header {
+            color: var(--grey);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+
+            a {
+                transition: color 300ms ease-in-out;
+            }
+
+            a:hover, a:focus {
+                color: var(--blue);
+            }
+        }
+    }
+}
+
+.main-business {
+    .title {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+    }
+
+    .hero {
+        background: var(--primary_color);
+
+        .business-hero {
+            color: var(--white);
+            text-align: center;
+            font-size: 44px;
+            font-weight: 900;
+            /*line-height: 1.36;*/
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .button-hero {
+            color: var(--white);
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
+            /*line-height: 1.875;*/
+            letter-spacing: 0.06em;
+            border-radius: 4px;
+            background: var(--blue);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    .advantages {
+        .advantages-list {
+            .advantages-item {
+                .advantages-title {
+                    font-weight: 700;
+                    letter-spacing: 0.03em;
+                    text-transform: uppercase;
+                }
+
+                .advantages-text {
+                    color: var(--grey);
+                    /*line-height: 1.71;*/
+                    letter-spacing: 0.03em;
+                }
+            }
+        }
+    }
+
+    .work {
+        .work-list {
+            .work-image {
+
+            }
+        }
+    }
+
+    .team {
+        background: var(--white_button);
+
+        .team-list {
+            .team-member {
+                border-radius: 0px 0px 4px 4px;
+                background: var(--white);
+                box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+
+                .portfolio {
+
+                }
+
+                .member {
+                    text-align: center;;
+                    font-size: 16px;
+                    font-weight: 500;
+                    letter-spacing: 0.03em;
+                }
+
+                .stack {
+                    color: var(--grey);
+                    text-align: center;
+                    font-size: 16px;
+                    letter-spacing: 0.03em;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background: var(--primary_color);
+
+    .logo-footer {
+        color: var(--blue);
+        > span {
+            color: var(--white)
+        }
+        font-family: Raleway, sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+    }
+
+    .footer-contact-list {
+
+        .contact-footer {
+            /*line-height: 1.14;*/
+            letter-spacing: 0.03em;
+            font-style: normal;
+            .city {
+                color: var(--white);
+            }
+            color: var(--grey);
+            a {
+                transition: color 300ms ease-in-out;
+            }
+            a:hover, a:focus {
+                color: var(--blue);
+            }
+        }
+    }
+}
+
+.main-portfolio {
+    .portfolio {
+        .list-button-portfolio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+            .button-element {
+                color: var(--black);
+                background: var(--white_button);
+
+                button {
+                    text-align: center;
+                    padding: 6px 22px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    /*line-height: 1.62;*/
+                    letter-spacing: 0.48px;
+                    transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+                    border: none;
+                }
+
+                button:hover, a:focus {
+                    color: var(--white);
+                    background-color: var(--blue);
+                }
+            }
+        }
+
+        .list-projects {
+            .project-element {
+                border: 1px solid #EEE;
+                background: var(--white);
+
+                .project-title {
+                    color: var(--black);
+                    font-size: 18px;
+                    font-weight: 700;
+                    /*line-height: 2;*/
+                    letter-spacing: 0.06em;
+                }
+
+                .project-text {
+                    color: var(--grey);
+                    font-size: 16px;
+                    /*line-height: 1.875;*/
+                    letter-spacing: 0.03em;
+                }
+            }
+        }
+    }
+}
