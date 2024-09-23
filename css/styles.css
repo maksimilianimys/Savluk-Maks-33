@@ -492,6 +492,7 @@ li {
                 }
 
                 button:hover, button:focus {
+                    box-shadow: 0 4px 3px rgb(0, 0, 0, 0.2);
                     color: var(--white);
                     background-color: var(--blue);
                 }
