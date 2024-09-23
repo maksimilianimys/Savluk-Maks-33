@@ -478,7 +478,6 @@ li {
 
             .button-element {
                 color: var(--black);
-                background: var(--white_button);
 
                 button {
                     text-align: center;
