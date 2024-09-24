@@ -18,7 +18,7 @@
 
         <nav>
             <ul class="header-link-list">
-                <li class="header-link-element"><a href="index.html">Студія</a></li>
+                <li class="header_link_active"><a href="index.html">Студія</a></li>
                 <li class="header-link-element"><a href="portfolio.html">Портфоліо</a></li>
                 <li class="header-link-element"><a href="#">Контакти</a></li>
             </ul>
@@ -48,7 +48,7 @@
     <section class="hero">
         <div class="container">
             <h1 class="business-hero">Ефективні рішення для вашого бізнесу</h1>
-            <button type="button" class="button-hero">Замовити послугу</button>
+            <button type="button" class="button-hero" data-modal-open>Замовити послугу</button>
         </div>
     </section>
 
@@ -102,9 +102,21 @@
         <div class="container">
             <h2 class="title">Чим ми займаємося</h2>
             <ul class="work-list">
-                <li class="work-image"><img src="images/type.jpg" width="370" height="294" alt="Тайп"></li>
-                <li class="work-image"><img src="images/phone.jpg" width="370" height="294" alt="Смартфон"></li>
-                <li class="work-image"><img src="images/tablet.jpg" width="370" height="294" alt="Планшет"></li>
+                <li class="work-image"><img src="images/type.jpg" width="370" height="294" alt="Тайп">
+                    <div class="work_overlay_text">
+                        Десктопні додатки
+                    </div>
+                </li>
+                <li class="work-image"><img src="images/phone.jpg" width="370" height="294" alt="Смартфон">
+                    <div class="work_overlay_text">
+                        Мобільні додатки
+                    </div>
+                </li>
+                <li class="work-image"><img src="images/tablet.jpg" width="370" height="294" alt="Планшет">
+                    <div class="work_overlay_text">
+                        Дизайнерські рішення
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -370,5 +382,16 @@
     </div>
 </footer>
 
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal_window">
+        <button type="button" class="close_modal_button" data-modal-close>
+            <svg class="icon_modal">
+                <use href="./images/icons-svg/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<script src="./js/modal.js"></script>
 </body>
 </html>
