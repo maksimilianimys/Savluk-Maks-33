@@ -522,8 +522,12 @@ img {
             overflow: hidden;
         }
 
-        .footer_input {
+        .label_input{
             flex-grow: 1;
+        }
+
+        .footer_input {
+            width: 100%;
             background: rgba(33, 150, 243, 0);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
             border-radius: 4px;
@@ -551,6 +555,11 @@ img {
             color: var(--white);
             display: flex;
             align-items: center;
+        }
+
+        .footer_button:hover, .footer_button:focus {
+            background-color: var(--light_blue);
+            transition: 300ms ease-in-out;
         }
 
             .footer_button_svg {
@@ -752,6 +761,7 @@ img {
 .close-modal-button:hover .icon-modal,
 .close-modal-button:focus .icon-modal {
     fill: var(--blue);
+    transition: 300ms ease-in-out;
 }
 
 .form {
@@ -784,6 +794,7 @@ img {
     border-radius: 4px;
     border: 1px #21212133 solid;
     padding: 11px 0px 11px 30px;
+    transition: color, outline 300ms ease-in-out;
 }
 
 .form_textarea {
@@ -796,11 +807,11 @@ img {
     letter-spacing: 0.12px;
     padding: 11px 12px;
     resize: none;
+    transition: outline 300ms ease-in-out;
 }
 
 .form-input:focus + .form-icon,
 .form-input:hover + .form-icon {
-    transition: 300ms;
     color: var(--blue);
 }
 
@@ -838,6 +849,7 @@ img {
 .form-a {
     text-decoration: underline;
     color: var(--blue);
+    transition: 300ms ease-in-out;
 }
 
 .label_license {
@@ -892,5 +904,6 @@ input[type="checkbox"]:checked::before {
 .form-button:hover,
 .form-button:focus {
     background: var(--light_blue);
+    transition: 300ms ease-in-out;
 }
 /**/
