@@ -1,0 +1,38 @@
+.advantages {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &-list {
+    gap: 30px;
+    display: flex;
+
+    &-item {
+      max-width: 270px;
+
+      &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 100px;
+        margin-bottom: 30px;
+        background-color: $white_button;
+        border-radius: 4px;
+      }
+
+      &-title {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      &-text {
+        color: $grey;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+      }
+    }
+  }
+}
+

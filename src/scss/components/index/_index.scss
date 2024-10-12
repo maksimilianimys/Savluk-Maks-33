@@ -1,0 +1,16 @@
+.main-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+@import "hero";
+
+@import "modal-window/modal-window";
+
+@import "advantages";
+@import "work";
+@import "team";
+@import "clients";

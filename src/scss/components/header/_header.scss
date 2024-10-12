@@ -1,0 +1,18 @@
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  @import "header-logo";
+
+  @import "header-nav";
+
+  @import "header-contact";
+
+}

@@ -1,0 +1,204 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  min-width: 528px;
+  background-color: $white;
+  opacity: 1;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window-close-button {
+  display: flex;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.modal-window-close-button-icon {
+  width: 18px;
+  height: 18px;
+  fill: $black;
+  transition: fill 0.5s;
+}
+
+.modal-window-close-button:hover .modal-window-close-button-icon,
+.modal-window-close-button:focus .modal-window-close-button-icon {
+  fill: $blue;
+  transition: 300ms ease-in-out;
+}
+
+.form_title {
+  color: $black;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.modal-window-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.modal-window-form-label{}
+
+.modal-window-form-label-text {
+  margin-bottom: 4px;
+}
+
+.modal-window-form-label-text-input {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px #21212133 solid;
+  padding: 11px 0px 11px 30px;
+  transition: outline-color 300ms ease-in-out;
+}
+
+.modal-window-form-label-text-area {
+  height: 120px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px #21212133 solid;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  padding: 11px 12px;
+  resize: none;
+  transition: outline-color 300ms ease-in-out;
+}
+
+.modal-window-form-label-text-input:focus + .modal-window-form-label-icon,
+.modal-window-form-label-text-input:hover + .modal-window-form-label-icon {
+  color: $blue;
+}
+
+.modal-window-form-label-text-input:hover,
+.modal-window-form-label-text-input:focus,
+.modal-window-form-label-text-area:hover,
+.modal-window-form-label-text-area:focus {
+  outline: 1px $blue solid;
+}
+
+.modal-window-form-label {
+  color: $grey;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  position: relative;
+}
+
+.modal-window-form-label:not(:first-child) {
+  margin-top: 10px;
+}
+
+.modal-window-form-label-icon {
+  position: absolute;
+  color: $black;
+  top: 28px;
+  left: 10px;
+  transition: color 300ms ease-in-out;
+}
+
+.modal-checkbox-div {
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
+  gap: 9px;
+}
+
+.modal-checkbox-div-label-a {
+  text-decoration: underline;
+  color: $blue;
+  transition: 300ms ease-in-out;
+}
+
+.modal-checkbox-div-label {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  border: $black 1px solid;
+  height: 15px;
+  width: 16px;
+  color: $white;
+  border-radius: 2px;
+  transition-duration: 0.5s;
+}
+
+input[type="checkbox"]:checked {
+  background: $blue;
+  border: none;
+  color: $white;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "✔";
+  margin-left: 3px;
+  display: inline-block;
+  text-align: center;
+}
+
+.modal-button-form-div {
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.modal-button-form-div-button {
+  background: $blue;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  padding: 10px 52px;
+
+  color: $white;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+
+  transition: background-color 300ms ease-in-out;
+}
+
+.modal-button-form-div-button:hover,
+.modal-button-form-div-button:focus {
+  background: $light_blue;
+}
