@@ -2,12 +2,31 @@
   padding-top: 94px;
   padding-bottom: 94px;
 
+  @include mobile {
+    padding: 60px 0;
+  }
+  @include tablet {
+    padding: 60px 0;
+  }
+
   &-list {
     gap: 30px;
     display: flex;
 
+    @include mobile {
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
     &-item {
-      max-width: 270px;
+      max-width: 350px;
+
+      @include mobile {
+        max-width: 100%;
+      }
 
       &-icon {
         display: flex;
@@ -17,6 +36,13 @@
         margin-bottom: 30px;
         background-color: $white_button;
         border-radius: 4px;
+
+        @include mobile {
+          //padding: 25px 190px;
+        }
+        @include tablet {
+          padding: 25px 142px;
+        }
       }
 
       &-title {
@@ -25,6 +51,10 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         margin-bottom: 10px;
+
+        @include mobile {
+          text-align: center;
+        }
       }
 
       &-text {
@@ -35,4 +65,3 @@
     }
   }
 }
-

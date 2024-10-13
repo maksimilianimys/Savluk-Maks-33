@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/modern-normalize.css">
     <link rel="stylesheet" href="css/main.min.css">
@@ -10,35 +12,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
           rel="stylesheet">
 </head>
+
 <body>
 
 <header class="header">
-    <div class="container">
+    <div class="container header__container">
         <a href="index.html" class="header-logo">Web<span>Studio</span></a>
-
-        <nav>
-            <ul class="header-link-list">
-                <li class="header-link-list-element"><a href="index.html">Студія</a></li>
-                <li class="header-link-list-element-active"><a href="portfolio.html">Портфоліо</a></li>
-                <li class="header-link-list-element"><a href="#">Контакти</a></li>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li>
+                    <a class="header__nav-link active" href="./index.html">Студія</a>
+                </li>
+                <li>
+                    <a class="header__nav-link" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li><a class="header__nav-link" href="">Контакти</a></li>
             </ul>
         </nav>
-
-        <ul class="header-contact-list">
-            <li class="header-contact-list-element">
-                <a href="mailto:info@devstudio.com">
-                    <svg class="header-contact-list-element-icon" width="16" height="12px">
+        <ul class="header__contacts-list">
+            <li class="header__contacts-item">
+                <a class="header__contacts-link" href="mailto:info@devstudio.com"
+                >
+                    <svg class="header__mail-icon">
                         <use href="./images/icons-svg/icons.svg#icon-email"></use>
                     </svg>
-                    info@devstudio.com
-                </a>
+                    info@devstudio.com</a
+                >
             </li>
-            <li class="header-contact-list-element">
-                <a href="tel:+380961111111">
-                    <svg class="header-contact-list-element-icon" width="10" height="16">
+            <li class="header__contacts-item">
+                <a class="header__contacts-link" href="tel:+380961111111"
+                >
+                    <svg class="header__tel-icon">
                         <use href="./images/icons-svg/icons.svg#icon-smartphone"></use>
                     </svg>
-                    +38 096 111 11 11</a>
+                    +38 096 111 11 11</a
+                >
+            </li>
+        </ul>
+        <button class="mobile_button" type="button" data-menu-button aria-expanded="false">
+            <svg class="mobile_button-close" width="19" height="19">
+                <use href="./images/icons-svg/icons.svg#icon-burger-close"
+                </use>
+            </svg>
+            <svg class="mobile_button-open" width="24" height="16">
+                <use href="./images/icons-svg/icons.svg#icon-burger-open"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="mobile" data-menu>
+        <nav class="mobile__nav">
+            <ul class="mobile__nav-list">
+                <li class="mobile__nav-item">
+                    <a href="./index.html" class="mobile__nav-link active">Студія</a>
+                </li>
+                <li class="mobile__nav-item">
+                    <a href="./portfolio.html" class="mobile__nav-link">Портфоліо</a>
+                </li>
+                <li class="mobile__nav-item">
+                    <a href="" class="mobile__nav-link">Контакти</a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="mobile__contacts-list">
+            <li class="mobile__contacts-item">
+                <a
+                        class="mobile__contacts-link link mobile__contacts-link--blue"
+                        href="tel:+380961111111"
+                >+38 096 111 11 11</a
+                >
+            </li>
+            <li class="mobile__contacts-item">
+                <a class="mobile__contacts-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+                >
+            </li>
+        </ul>
+        <ul class="mobile__social-list">
+            <li class="mobile__social-item">
+                <a class="mobile__social-link" href="">Instagram</a>
+            </li>
+            <li class="mobile__social-item">
+                <a class="mobile__social-link" href="">Twitter</a>
+            </li>
+            <li class="mobile__social-item">
+                <a class="mobile__social-link" href="">Facebook</a>
+            </li>
+            <li class="mobile__social-item">
+                <a class="mobile__social-link" href="">LinkedIn</a>
             </li>
         </ul>
     </div>
@@ -49,28 +109,29 @@
         <div class="container">
             <ul class="portfolio-section-list-button">
                 <li class="portfolio-section-list-button-element">
-                    <button type="button">Усі</button>
+                    <button type="button" class="button-row__filter active" data-name="all">Усі</button>
                 </li>
                 <li class="portfolio-section-list-button-element">
-                    <button type="button">Веб-сайти</button>
+                    <button type="button" class="button-row__filter active" data-name="web">Веб-сайти</button>
                 </li>
                 <li class="portfolio-section-list-button-element">
-                    <button type="button">Додатки</button>
+                    <button type="button" class="button-row__filter active" data-name="app">Додатки</button>
                 </li>
                 <li class="portfolio-section-list-button-element">
-                    <button type="button">Дизайн</button>
+                    <button type="button" class="button-row__filter active" data-name="design">Дизайн</button>
                 </li>
                 <li class="portfolio-section-list-button-element">
-                    <button type="button">Маркетинг</button>
+                    <button type="button" class="button-row__filter active" data-name="marketing">Маркетинг</button>
                 </li>
             </ul>
 
             <ul class="portfolio-section-list-projects">
-                <li class="portfolio-section-list-projects-element" tabindex="0">
+                <li class="portfolio-section-list-projects-element" tabindex="0" data-name="web">
                     <div class="portfolio-section-list-projects-element-container">
                         <img src="images/Technocrack.jpg" width="370" height="294" alt="Технокряк">
                         <div class="portfolio-section-list-projects-element-container-text">
-                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує
+                                комплексні пропозиції з різним рівнем функціоналу
                                 та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                 приватну особу.</p>
                         </div>
@@ -81,27 +142,30 @@
                     </div>
                 </li>
 
-                <li class="portfolio-section-list-projects-element" tabindex="0">
+                <li class="portfolio-section-list-projects-element" tabindex="0" data-name="design">
                     <div class="portfolio-section-list-projects-element-container">
                         <img src="images/New-Orlean.jpg" width="370" height="294"
                              alt="Постер New Orlean vs Golden Star">
                         <div class="portfolio-section-list-projects-element-container-text">
-                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує
+                                комплексні пропозиції з різним рівнем функціоналу
                                 та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                 приватну особу.</p>
                         </div>
                     </div>
                     <div class="portfolio-section-list-projects-element-info">
-                        <h3 class="portfolio-section-list-projects-element-info-title">Постер New Orlean vs Golden Star</h3>
+                        <h3 class="portfolio-section-list-projects-element-info-title">Постер New Orlean vs Golden
+                            Star</h3>
                         <p class="portfolio-section-list-projects-element-info-text">Дизайн</p>
                     </div>
                 </li>
 
-                <li class="portfolio-section-list-projects-element" tabindex="0">
+                <li class="portfolio-section-list-projects-element" tabindex="0" data-name="app">
                     <div class="portfolio-section-list-projects-element-container">
                         <img src="images/Seafood.jpg" width="370" height="294" alt="Ресторан Seafood">
                         <div class="portfolio-section-list-projects-element-container-text">
-                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує
+                                комплексні пропозиції з різним рівнем функціоналу
                                 та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                 приватну особу.</p>
                         </div>
@@ -112,11 +176,12 @@
                     </div>
                 </li>
 
-                <li class="portfolio-section-list-projects-element" tabindex="0">
+                <li class="portfolio-section-list-projects-element" tabindex="0" data-name="marketing">
                     <div class="portfolio-section-list-projects-element-container">
                         <img src="images/Prime.jpg" width="370" height="294" alt="Проєкт Prime">
                         <div class="portfolio-section-list-projects-element-container-text">
-                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує
+                                комплексні пропозиції з різним рівнем функціоналу
                                 та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                 приватну особу.</p>
                         </div>
@@ -127,11 +192,12 @@
                     </div>
                 </li>
 
-                <li class="portfolio-section-list-projects-element" tabindex="0">
+                <li class="portfolio-section-list-projects-element" tabindex="0" data-name="app">
                     <div class="portfolio-section-list-projects-element-container">
                         <img src="images/Boxes.jpg" width="370" height="294" alt="Проєкт Boxes">
                         <div class="portfolio-section-list-projects-element-container-text">
-                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує
+                                комплексні пропозиції з різним рівнем функціоналу
                                 та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                 приватну особу.</p>
                         </div>
@@ -142,11 +208,12 @@
                     </div>
                 </li>
 
-                <li class="portfolio-section-list-projects-element" tabindex="0">
+                <li class="portfolio-section-list-projects-element" tabindex="0" data-name="web">
                     <div class="portfolio-section-list-projects-element-container">
                         <img src="images/Borders.jpg" width="370" height="294" alt="Inspiration has no Borders">
                         <div class="portfolio-section-list-projects-element-container-text">
-                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує
+                                комплексні пропозиції з різним рівнем функціоналу
                                 та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                 приватну особу.</p>
                         </div>
@@ -157,11 +224,12 @@
                     </div>
                 </li>
 
-                <li class="portfolio-section-list-projects-element" tabindex="0">
+                <li class="portfolio-section-list-projects-element" tabindex="0" data-name="design">
                     <div class="portfolio-section-list-projects-element-container">
                         <img src="images/Limited-Edition.jpg" width="370" height="294" alt="Видання Limited Edition">
                         <div class="portfolio-section-list-projects-element-container-text">
-                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує
+                                комплексні пропозиції з різним рівнем функціоналу
                                 та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                 приватну особу.</p>
                         </div>
@@ -172,11 +240,12 @@
                     </div>
                 </li>
 
-                <li class="portfolio-section-list-projects-element" tabindex="0">
+                <li class="portfolio-section-list-projects-element" tabindex="0" data-name="marketing">
                     <div class="portfolio-section-list-projects-element-container">
                         <img src="images/Lab.jpg" width="370" height="294" alt="Проєкт LAB">
                         <div class="portfolio-section-list-projects-element-container-text">
-                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує
+                                комплексні пропозиції з різним рівнем функціоналу
                                 та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                 приватну особу.</p>
                         </div>
@@ -187,11 +256,12 @@
                     </div>
                 </li>
 
-                <li class="portfolio-section-list-projects-element" tabindex="0">
+                <li class="portfolio-section-list-projects-element" tabindex="0" data-name="app">
                     <div class="portfolio-section-list-projects-element-container">
                         <img src="images/Growing.jpg" width="370" height="294" alt="Growing Business">
                         <div class="portfolio-section-list-projects-element-container-text">
-                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                            <p class="portfolio-section-list-projects-element-container-text-portfolio">Ресурс пропонує
+                                комплексні пропозиції з різним рівнем функціоналу
                                 та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                 приватну особу.</p>
                         </div>
@@ -201,7 +271,6 @@
                         <p class="portfolio-section-list-projects-element-info-text">Додаток</p>
                     </div>
                 </li>
-
             </ul>
         </div>
     </section>
@@ -279,6 +348,9 @@
         </div>
     </div>
 </footer>
+
+<script src="js/mobile-nav.js"></script>
+<script src="./js/filter.js"></script>
 
 </body>
 </html>

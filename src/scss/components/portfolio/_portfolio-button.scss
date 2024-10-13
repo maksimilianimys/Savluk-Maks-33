@@ -1,11 +1,23 @@
 .portfolio-section {
   padding-top: 94px;
+
   &-list-button {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
     margin-bottom: 50px;
+
+    @include mobile {
+      justify-content: normal;
+      flex-wrap: wrap;
+      max-width: 350px;
+      row-gap: 15px;
+      margin-bottom: 40px;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+    }
 
     &-element {
       color: $black;

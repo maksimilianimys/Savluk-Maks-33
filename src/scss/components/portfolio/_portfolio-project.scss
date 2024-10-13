@@ -1,82 +1,129 @@
-.portfolio-section-list-projects {
+.portfolio {
 
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding-bottom: 94px;
+  @include mobile {
+    padding: 60px 0;
+  }
+  @include tablet {
+    padding: 60px 0;
+  }
 
-  &-element {
-    border: 1px solid #EEE;
-    background: $white;
-    max-width: 370px;
+  &-section-list-projects {
 
-    transition: box-shadow 300ms ease-in-out;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 94px;
+    justify-content: center;
 
-    img {
-      width: 100%;
+    @include tablet {
+      gap: 24px;
+      justify-content: start;
     }
 
-    &-container {
-      position: relative;
-      display: inline-block;
-      overflow: hidden;
+    &-element {
+      border: 1px solid #EEE;
+      background: $white;
+      max-width: 370px;
 
-      &-text {
-        position: absolute;
-        top: 0;
-        left: 0;
+      @include mobile {
+        max-width: 450px;
+        max-height: 404px;
+        margin: 0px;
+      }
+      @include tablet {
+        max-width: 345px;
+      }
+
+      transition: box-shadow 300ms ease-in-out;
+
+      img {
         width: 100%;
-        height: 100%;
-        transform: translateY(101%);
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 250ms;
-        opacity: 0.9;
-        transition-property: transform;
-        background-color: $blue;
 
-        &-portfolio {
-          font-size: 18px;
-          line-height: 1.55;
-          letter-spacing: 0.03em;
-          color: $white;
-          padding: 63px 24px;
-          opacity: 0.9;
+        @include mobile {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        @include tablet {
+          max-width: 100%;
         }
       }
-    }
 
-    &-info {
+      &-container {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
 
-      padding: 20px 23px;
+        @include mobile {
+          width: 450px;
+          height: 294px;
+        }
 
-      &-title {
-        color: $black;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 2;
-        letter-spacing: 0.06em;
-        margin-bottom: 4px;
+        &-text {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform: translateY(101%);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 250ms;
+          opacity: 0.9;
+          transition-property: transform;
+          background-color: $blue;
+
+          @include mobile {
+            transform: translateY(134%);
+          }
+
+          &-portfolio {
+            font-size: 18px;
+            line-height: 1.55;
+            letter-spacing: 0.03em;
+            color: $white;
+            padding: 63px 24px;
+            opacity: 0.9;
+
+            @include mobile {
+              padding: 77px 24px;
+            }
+          }
+        }
       }
 
-      &-text {
-        color: $grey;
-        font-size: 16px;
-        line-height: 1.875;
-        letter-spacing: 0.03em;
+      &-info {
+
+        padding: 20px 23px;
+
+        &-title {
+          color: $black;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 2;
+          letter-spacing: 0.06em;
+          margin-bottom: 4px;
+        }
+
+        &-text {
+          color: $grey;
+          font-size: 16px;
+          line-height: 1.875;
+          letter-spacing: 0.03em;
+        }
       }
-    }
 
-    &:hover &-container-text,
-    &:focus &-container-text {
-      transform: translateY(0);
-    }
+      &:hover &-container-text,
+      &:focus &-container-text {
+        transform: translateY(0);
+      }
 
-    &:hover,
-    &:focus {
-      background-color: $white;
-      border: 1px solid #eeeeee;
-      box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+      &:hover,
+      &:focus {
+        background-color: $white;
+        border: 1px solid #eeeeee;
+        box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+      }
     }
   }
 }
