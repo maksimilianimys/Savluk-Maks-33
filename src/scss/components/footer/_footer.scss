@@ -68,6 +68,10 @@
     }
   }
 
+  .footer-container {
+    min-width: 231px;
+  }
+
   .footer-logo {
 
     display: inline-block;
@@ -86,6 +90,7 @@
   }
 
   .footer-container-contact-list {
+
 
     &-element {
 
@@ -243,6 +248,12 @@
         &-icon {
           margin-left: 10px;
           fill: currentColor;
+          @include tablet {
+            margin-left: 12px;
+          }
+          @include mobile {
+            margin-left: 12px;
+          }
         }
       }
 

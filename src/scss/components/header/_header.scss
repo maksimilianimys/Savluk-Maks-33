@@ -2,7 +2,7 @@
   display: block;
   border-bottom: 1px solid #ececec;
   @include tablet {
-    padding: 6px 0;
+    padding: 16px 0;
   }
   @include mobile {
     padding: 10px 0;
@@ -106,7 +106,7 @@
         background-color: $blue;
 
         @include tablet {
-          bottom: 10px;
+          bottom: 0px;
         }
         @include desktop {
           bottom: -1px;
@@ -168,6 +168,10 @@
   &__tel-icon {
     margin-right: 10px;
     fill: currentColor;
+
+    @include tablet {
+      margin-right: 8px;
+    }
   }
 
   &__mail-icon {
@@ -249,8 +253,8 @@
 
   position: fixed;
   background-color: #fff;
-  width: 100vh;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   padding: 48px 40px;

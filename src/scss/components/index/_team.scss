@@ -26,6 +26,10 @@
 
     &-member {
 
+      @include tablet {
+        max-width: 340px;
+      }
+
       &-card {
         border-radius: 0px 0px 4px 4px;
         background: $white;

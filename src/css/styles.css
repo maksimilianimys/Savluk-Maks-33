@@ -780,7 +780,8 @@ img {
     flex-direction: column;
 }
 
-.modal-window-form-label{}
+.modal-window-form-label {
+}
 
 .modal-window-form-label-text {
     margin-bottom: 4px;

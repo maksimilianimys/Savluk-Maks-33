@@ -54,4 +54,14 @@ button {
   @include mobile {
     max-width: 100%;
   }
+
+  //@include desktop {
+  //  max-width: 1200px;
+  //}
+  //@include tablet {
+  //  max-width: 768px;
+  //}
+  //@include mobile {
+  //  max-width: 480px;
+  //}
 }
