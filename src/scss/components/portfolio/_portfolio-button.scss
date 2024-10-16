@@ -1,0 +1,47 @@
+.portfolio-section {
+
+  &-list-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 50px;
+
+    @include mobile {
+      justify-content: normal;
+      flex-wrap: wrap;
+      max-width: 350px;
+      row-gap: 15px;
+      margin-bottom: 40px;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include desktop {
+      padding-top: 94px;
+    }
+
+    &-element {
+
+      button {
+        text-align: center;
+        color: $black;
+        padding: 6px 22px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.62;
+        letter-spacing: 0.03em;
+        border: none;
+        transition: color 300ms ease-in-out, background-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+      }
+
+      button:hover, button:focus {
+        box-shadow: 0 4px 3px rgb(0, 0, 0, 0.2);
+        color: $white;
+        background-color: $blue;
+      }
+    }
+  }
+}
